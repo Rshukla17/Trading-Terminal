@@ -363,7 +363,9 @@ def check_tp_sl(symbol, current_price):
 # ============================================================================
 # SIDEBAR
 # ============================================================================
-st.sidebar.title("⚙️ Trading Terminal")
+st.sidebar.image("unnamed.jpg", use_container_width=True)
+st.sidebar.markdown("<br>", unsafe_allow_html=True)
+st.sidebar.title("Trading Terminal")
 
 symbol = st.sidebar.text_input("Symbol", value="SPY").upper()
 timeframe = st.sidebar.selectbox("Timeframe", ["1m", "5m", "15m", "1h", "1d"], index=1)
