@@ -442,14 +442,18 @@ if st.sidebar.button("🔄 Reset Account", use_container_width=True):
 # ============================================================================
 # MAIN DASHBOARD
 # ============================================================================
-header_col1, header_col2 = st.columns([1, 6]) # Adjust ratio to fit your preference
+col_logo, col_title = st.columns([1, 10])
 
-with header_col1:
-    st.image("unnamed.jpg", width=70) # Set a fixed width for the header icon
+with col_logo:
+    # Adjusting width to 60-80px usually looks best for headers
+    st.image("unnamed.jpg", width=70) 
 
-with header_col2:
-    st.title("R-Quant AI Terminal")
-    st.caption("Built by Rajan. Powered by Data. Driven by ICT." "Your Sovereign Command Center for the Global Markets.")
+with col_title:
+    # This removes the default top padding to align with the logo
+    st.markdown("""
+        <h1 style='margin-bottom: 0; padding-top: 0;'>R-Quant AI Terminal</h1>
+        <p style='margin-top: 0; opacity: 0.8;'>Built by Rajan. Powered by Data. Driven by ICT.</p>
+    """, unsafe_allow_html=True)
 
 df = fetch_market_data(symbol, timeframe)
 
