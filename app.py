@@ -440,7 +440,8 @@ if st.sidebar.button("🔄 Reset Account", use_container_width=True):
 # ============================================================================
 # MAIN DASHBOARD
 # ============================================================================
-st.title("📊 Professional Day Trading Terminal")
+st.title("📊 R-Quant Trading Terminal")
+st.caption("Built by Rajan. Powered by Data. Driven by ICT." "Your Sovereign Command Center for the Global Markets.")
 
 df = fetch_market_data(symbol, timeframe)
 
