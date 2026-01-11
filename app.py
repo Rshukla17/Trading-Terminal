@@ -442,8 +442,14 @@ if st.sidebar.button("🔄 Reset Account", use_container_width=True):
 # ============================================================================
 # MAIN DASHBOARD
 # ============================================================================
-st.title("📊 R-Quant Trading Terminal")
-st.caption("Built by Rajan. Powered by Data. Driven by ICT." "Your Sovereign Command Center for the Global Markets.")
+header_col1, header_col2 = st.columns([1, 6]) # Adjust ratio to fit your preference
+
+with header_col1:
+    st.image("unnamed.jpg", width=70) # Set a fixed width for the header icon
+
+with header_col2:
+    st.title("R-Quant AI Terminal")
+    st.caption("Built by Rajan. Powered by Data. Driven by ICT." "Your Sovereign Command Center for the Global Markets.")
 
 df = fetch_market_data(symbol, timeframe)
 
